@@ -5,5 +5,6 @@ export default defineSchema({
     todos: defineTable({
         text: v.string(),
         completed: v.boolean(),
-    }).index("by_completed", ["completed"]),
+        userId: v.string(),
+    }).index("by_userId", ["userId"]),
 });
